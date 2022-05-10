@@ -4,3 +4,4 @@
 ![](https://github.com/ZeroIsntNull/Convolution-kernel-bear-CV2-/blob/master/orig.jpeg)
 ## Покадрово сложенная каждая итерация, как результат свертки с помощью библиотеки PIL.
 ![](https://github.com/ZeroIsntNull/Convolution-kernel-bear-CV2-/blob/master/bear_gif.gif)
+ 
