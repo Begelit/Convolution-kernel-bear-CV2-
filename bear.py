@@ -52,9 +52,19 @@ era1_kernel = np.array([[0.0,0.0,0.0],
 
 for i in range(30):
     kernel += era1_kernel
+    text1 = str(kernel[0])
+    text2 = str(kernel[1])
+    text3 = str(kernel[2])
+    text4 = ' - kernel'
+    #text = ' '*len('kernel = ')+str(kernel[0])+'\n'+'kernel = '+str(kernel[1])+'\n'+' '*len('kernel = ')+str(kernel[2])
     if rgb > 4:
         rgb = 0
     img_rst = cv2.filter2D(list_orig[rgb],-1,kernel)
+    cv2.putText(img_rst,text1,(10,20),cv2.FONT_HERSHEY_SIMPLEX,0.4,(0,0,0),2)
+    cv2.putText(img_rst,text2,(10,40),cv2.FONT_HERSHEY_SIMPLEX,0.4,(0,0,0),2)
+    cv2.putText(img_rst,text3,(10,60),cv2.FONT_HERSHEY_SIMPLEX,0.4,(0,0,0),2)
+    cv2.putText(img_rst,text4,(140,40),cv2.FONT_HERSHEY_SIMPLEX,0.7,(0,0,0),2)
+    #cv2.putText(img_rst,text,(20,20),cv2.FONT_HERSHEY_SIMPLEX,0.5,(0,0,0),2)
     cv2.imwrite('/home/koza/bear/era_1/'+str(i)+'.jpeg',img_rst)
     if i%10 == 0:
         rgb += 1
@@ -75,10 +85,23 @@ era2_kernel = np.array([[0.0,-0.1,0.0],
 
 
 for i in range(i,i+11):
+    print(i)
     kernel += era2_kernel
+    text1 = str(kernel[0])
+    text2 = str(kernel[1])
+    text3 = str(kernel[2])
+    text4 = ' - kernel'
     if rgb > 4:
         rgb = 0
     img_rst = cv2.filter2D(list_orig[rgb],-1,kernel)
+    if i > 34:
+        bgr = (0,0,255)
+    else:
+        bgr = (0,0,0)
+    cv2.putText(img_rst,text1,(10,20),cv2.FONT_HERSHEY_SIMPLEX,0.4,bgr,2)
+    cv2.putText(img_rst,text2,(10,40),cv2.FONT_HERSHEY_SIMPLEX,0.4,bgr,2)
+    cv2.putText(img_rst,text3,(10,60),cv2.FONT_HERSHEY_SIMPLEX,0.4,bgr,2)
+    cv2.putText(img_rst,text4,(140,40),cv2.FONT_HERSHEY_SIMPLEX,0.7,bgr,2)
     cv2.imwrite('/home/koza/bear/era_1/'+str(i)+'.jpeg',img_rst)
     if i%10 == 0:
         rgb += 1
@@ -88,10 +111,25 @@ for i in range(i,i+11):
 
 
 for i in range(i,i+11):
+    print(i)
     kernel += era1_kernel
+    text1 = str(kernel[0])
+    text2 = str(kernel[1])
+    text3 = str(kernel[2])
+    text4 = ' - kernel'
+    #text = ' '*len('kernel = ')+str(kernel[0])+'\n'+'kernel = '+str(kernel[1])+'\n'+' '*len('kernel = ')+str(kernel[2])
     if rgb > 4:
         rgb = 0
     img_rst = cv2.filter2D(list_orig[rgb],-1,kernel)
+    if i < 49:
+        bgr = (0,0,255)
+    else:
+        bgr = (0,0,0)
+    #cv2.putText(img_rst,text,(20,20),cv2.FONT_HERSHEY_SIMPLEX,0.5,(0,0,0),2)
+    cv2.putText(img_rst,text1,(20,20),cv2.FONT_HERSHEY_SIMPLEX,0.4,bgr,2)
+    cv2.putText(img_rst,text2,(20,40),cv2.FONT_HERSHEY_SIMPLEX,0.4,bgr,2)
+    cv2.putText(img_rst,text3,(20,60),cv2.FONT_HERSHEY_SIMPLEX,0.4,bgr,2)
+    cv2.putText(img_rst,text4,(140,40),cv2.FONT_HERSHEY_SIMPLEX,0.7,bgr,2)
     cv2.imwrite('/home/koza/bear/era_1/'+str(i)+'.jpeg',img_rst)
     if i%10 == 0:
         rgb += 1
@@ -103,9 +141,19 @@ for i in range(i,i+11):
 
 for i in range(i,i+11):
     kernel += era1_kernel
+    text1 = str(kernel[0])
+    text2 = str(kernel[1])
+    text3 = str(kernel[2])
+    text4 = ' - kernel'
+    #text = ' '*len('kernel = ')+str(kernel[0])+'\n'+'kernel = '+str(kernel[1])+'\n'+' '*len('kernel = ')+str(kernel[2])
     if rgb > 4:
         rgb = 0
     img_rst = cv2.filter2D(list_orig[rgb],-1,kernel)
+    #cv2.putText(img_rst,text,(20,20),cv2.FONT_HERSHEY_SIMPLEX,0.5,(0,0,0),2)
+    cv2.putText(img_rst,text1,(20,20),cv2.FONT_HERSHEY_SIMPLEX,0.4,(0,0,0),2)
+    cv2.putText(img_rst,text2,(20,40),cv2.FONT_HERSHEY_SIMPLEX,0.4,(0,0,0),2)
+    cv2.putText(img_rst,text3,(20,60),cv2.FONT_HERSHEY_SIMPLEX,0.4,(0,0,0),2)
+    cv2.putText(img_rst,text4,(140,40),cv2.FONT_HERSHEY_SIMPLEX,0.7,(0,0,0),2)
     cv2.imwrite('/home/koza/bear/era_1/'+str(i)+'.jpeg',img_rst)
     if i%10 == 0:
         rgb += 1
